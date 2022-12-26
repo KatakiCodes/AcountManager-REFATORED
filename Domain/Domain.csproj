@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Model\UserModel.cs" />
+    <Compile Include="ObjectValue\Cache.cs" />
     <Compile Include="ObjectValue\EntityState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

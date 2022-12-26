@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using logScreen._public._classes;
+using Domain.Model;
+using logScreen.Help;
 
 namespace logScreen._userControls
 {
@@ -20,61 +22,35 @@ namespace logScreen._userControls
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
+            UserModel user = new UserModel();
+            ValidationObject validationObject;
 
-            //Restringir campos de cadastro de user
-            if (vf.RestrictEmptysPassword
-                (txt_Password, txt_Confirm_Password
-                , txt_Other_Password
-                , txt_Comfirm_Other_Password) == false)
+            user.Password = txt_Password.Text;
+            user.Alt_password = txt_Other_Password.Text;
+            
+            if(txt_Confirm_Password.Text != txt_Password.Text || txt_Comfirm_Other_Password.Text != txt_Other_Password.Text)
             {
-                return;
+                MessageBox.Show("Error to confirm passwords");
             }
             else
             {
-                //Verificar a compatibilidade das senhas
-                if (txt_Password.Text != txt_Confirm_Password.Text || txt_Other_Password.Text != txt_Comfirm_Other_Password.Text)
+                validationObject = new ValidationObject(user);
+                if (validationObject.Validate() == true)
                 {
-                    MessageBox.Show("The password confirmatio must be the same!", "Create user", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
                 else
                 {
-                    if (vf.getPasswordStrenght(txt_Confirm_Password.Text, txt_Other_Password.Text) == true)
-                    {
-                        try
-                        {
-
-                        }
-                        catch (Exception erro)
-                        {
-                            MessageBox.Show(erro.Message);
-                        }
-                    }
-                    else
-                    {
-                        if (MessageBox.Show("The password or alternative password you are using is a short password", "Create User",
-                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                        {
-                            try
-                            {
-
-                            }
-                            catch (Exception erro)
-                            {
-                                MessageBox.Show(erro.Message);
-                            }
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
+                    return;
                 }
+                
+
             }
         }
 
     private void Uc_cad_Load(object sender, EventArgs e)
     {
-
+         
     }
 
     private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

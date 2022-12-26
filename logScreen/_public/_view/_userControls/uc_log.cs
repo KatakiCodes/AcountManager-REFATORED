@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Domain.Model;
+using logScreen.Help;
+
 
 namespace logScreen._userControls
 {
@@ -19,17 +22,7 @@ namespace logScreen._userControls
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                txtPassword.BorderColor = Color.Crimson;
-                logScreen._public._classes.Holding.Holding_logScreen = false;
-            }
-            else
-            {
-                var dashboard = new DashBoard();
-                dashboard.Show();
-                logScreen._public._classes.Holding.Holding_logScreen = true;
-            }
+   
         }
 
         private void Timer1_Tick(object sender, EventArgs e)

@@ -41,6 +41,7 @@
       <HintPath>..\..\..\..\Desktop\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -54,11 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="account_managerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>account_managerDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Help\ValidationObject.cs" />
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,17 +142,6 @@
     <EmbeddedResource Include="_public\_view\_userControls\uc_log.resx">
       <DependentUpon>uc_log.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="account_managerDataSet.xsc">
-      <DependentUpon>account_managerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="account_managerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>account_managerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="account_managerDataSet.xss">
-      <DependentUpon>account_managerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,7 +156,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helps\" />
     <Folder Include="_public\_view\_userControls\_results\" />
   </ItemGroup>
   <ItemGroup>

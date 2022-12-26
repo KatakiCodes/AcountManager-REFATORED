@@ -13,7 +13,7 @@ namespace DataAccses.Repositories
         private readonly string ConectionString;
         public Repository()
         {
-            this.ConectionString = ConfigurationManager.ConnectionStrings["logScreen.Properties.Settings.account_managerConnectionString1"].ToString();         
+            this.ConectionString = ConfigurationManager.ConnectionStrings["logScreen.Properties.Settings.Setting"].ToString();         
         }
         public OleDbConnection GetConnection()
         {

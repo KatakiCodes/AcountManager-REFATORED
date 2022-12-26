@@ -21,7 +21,7 @@ namespace Domain.Model
         private int contact;
 
         private IAccountRepository accountRepository;
-        private EntityState state;
+        public EntityState state;
 
         public int Id_pk { get => id_pk; set => id_pk = value; }
         [Required]
