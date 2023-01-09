@@ -83,7 +83,7 @@ namespace logScreen._modal
 
         private void All_Accounts_Load(object sender, EventArgs e)
         {
-            guna2DataGridView1.DataSource = Cache.account;
+            dataGridView1.DataSource = Cache.account;
         }
     }
 }
