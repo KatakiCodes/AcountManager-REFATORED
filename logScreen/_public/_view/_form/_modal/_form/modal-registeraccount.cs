@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain.Model;
+using Domain.ObjectValue;
+using logScreen.Help;
 
 namespace logScreen._modal
 {
@@ -41,10 +44,10 @@ namespace logScreen._modal
         {
             if (check_EmailOnly.Checked == true)
             {
-                txt_UserName.Enabled = false;
                 txt_contact.Enabled = false;
                 cmb_plataform.SelectedIndex = 0;
                 cmb_plataform.Enabled = false;
+                txt_Plataform_name.Text = "Email";
             }
             else
             {
@@ -62,7 +65,55 @@ namespace logScreen._modal
                 txt_Plataform_name.Focus();
             }
             else
+            {
+                txt_Plataform_name.Text = cmb_plataform.SelectedItem.ToString();
                 txt_Plataform_name.Enabled = false;
+            }
+        }
+
+        private void Guna2TileButton2_Click(object sender, EventArgs e)
+        {
+            AccountModel accountModel = new AccountModel();
+            UserModel userModel = new UserModel();
+            ValidationObject validationObject;
+
+            //Embocando os dados para validação
+            accountModel.Email = (String.IsNullOrWhiteSpace(txt_Email.Text))? "No set" : txt_Email.Text;
+            accountModel.Contact = (String.IsNullOrWhiteSpace(txt_contact.Text)) ? 0 : int.Parse(txt_contact.Text);
+            accountModel.Password = txt_confirm_Password.Text;
+            accountModel.Plataform = txt_Plataform_name.Text;
+            accountModel.User = (String.IsNullOrWhiteSpace(txt_UserName.Text)) ? "No set" : txt_UserName.Text;
+            accountModel.Password_creator = (String.IsNullOrEmpty(Cache.user.Password))? Cache.user.Alt_password : Cache.user.Password;
+            
+
+            //Validando os campos
+            validationObject = new ValidationObject(accountModel);
+            if (validationObject.Validate() == true)
+            {
+                if (txt_Password.Text == txt_confirm_Password.Text)
+                {
+                    accountModel.state = EntityState.Added;
+                    userModel.FilterAccount();
+                    MessageBox.Show(accountModel.saveChanges());
+                }
+                else
+                    MessageBox.Show("Check the confirmation of the password");
+
+            }
+
+        }
+
+        private void Modal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_contact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

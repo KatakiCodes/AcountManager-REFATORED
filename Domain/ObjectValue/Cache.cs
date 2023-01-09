@@ -7,14 +7,9 @@ using Domain.Model;
 
 namespace Domain.ObjectValue
 {
-    public class Cache
+    public static class Cache
     {
-        private UserModel user;
-        private AccountModel account;
-        public Cache()
-        {
-            user = new UserModel();
-            account = new AccountModel();
-        }
+        public static UserModel user = new UserModel();
+        public static List<AccountModel> account = new List<AccountModel>();
     }
 }

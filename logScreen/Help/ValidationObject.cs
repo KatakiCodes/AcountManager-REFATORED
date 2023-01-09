@@ -12,35 +12,27 @@ namespace logScreen.Help
     {
         private ValidationContext context;
         private List<ValidationResult> results;
-        private bool valid;
+        private bool Valid;
         private string message;
 
-        public ValidationObject(object instance)
+        public ValidationObject(Object instance)
         {
             context = new ValidationContext(instance);
-            valid = Validator.TryValidateObject(instance, context, results, true);
             results = new List<ValidationResult>();
+            Valid = Validator.TryValidateObject(instance, context, results, true);
         }
 
-
-
-        //Validate
         public bool Validate()
         {
-            if (valid == false)
+            if (Valid == false)
             {
                 foreach (ValidationResult item in results)
                 {
                     message = item.ErrorMessage;
                 }
-                
-                MessageBox.Show(message);
-                return false;
+                System.Windows.Forms.MessageBox.Show(message);
             }
-            else
-            {
-                return true;
-            }
+            return Valid;
         }
     }
 }

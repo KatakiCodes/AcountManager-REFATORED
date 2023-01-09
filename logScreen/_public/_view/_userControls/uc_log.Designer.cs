@@ -32,7 +32,6 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btn_login = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.togglePasswordKind = new System.Windows.Forms.LinkLabel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,21 +76,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGIN";
             // 
-            // togglePasswordKind
-            // 
-            this.togglePasswordKind.ActiveLinkColor = System.Drawing.Color.DarkSlateBlue;
-            this.togglePasswordKind.AutoSize = true;
-            this.togglePasswordKind.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.togglePasswordKind.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.togglePasswordKind.LinkColor = System.Drawing.Color.MediumSlateBlue;
-            this.togglePasswordKind.Location = new System.Drawing.Point(65, 237);
-            this.togglePasswordKind.Name = "togglePasswordKind";
-            this.togglePasswordKind.Size = new System.Drawing.Size(107, 15);
-            this.togglePasswordKind.TabIndex = 14;
-            this.togglePasswordKind.TabStop = true;
-            this.togglePasswordKind.Text = "Try other password";
-            this.togglePasswordKind.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
-            // 
             // txtPassword
             // 
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -113,12 +97,12 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(248, 36);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
             // 
             // uc_log
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.togglePasswordKind);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtPassword);
@@ -136,7 +120,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_login;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel togglePasswordKind;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }

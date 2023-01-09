@@ -20,16 +20,15 @@ namespace logScreen
         private void Form1_Load(object sender, EventArgs e)
         {
             //Check user into database
-            if(userModel.getAll() == null)
+            if(userModel.GetAll() == null)
             {
                 link_ToggleControl.Text = "Create user";
-                Uc_cad cad = new Uc_cad();
                 vf.toggle_log_cad_control(log_Container, link_ToggleControl);
+                vf.Toggle_loginImage(pictureBox1, pictureBox2, link_ToggleControl.Text);
             }
             else
             {
                 link_ToggleControl.Text = "Login";
-                Uc_cad cad = new Uc_cad();
                 vf.toggle_log_cad_control(log_Container, link_ToggleControl);
             }
         }
@@ -50,6 +49,9 @@ namespace logScreen
             {
                 this.Hide();
                 timer1.Stop();
+                logScreen.DashBoard dashboard = new DashBoard();
+                dashboard.Show();
+                timer1.Dispose();
             }
         }
     }

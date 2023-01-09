@@ -15,6 +15,7 @@ namespace DataAccses.Entity
        public string password { get; set; }
        public string user { get; set; }
        public int contact { get; set; }
+       public string password_creator { get; set; }
 
         //Constructor
         public Account()
@@ -22,7 +23,7 @@ namespace DataAccses.Entity
 
         }
 
-        public Account(int id_pk, string plataform, string email, string password, string user, int contact)
+        public Account(int id_pk, string plataform, string email, string password, string user, int contact, string password_creator)
         {
             this.id_pk = id_pk;
             this.plataform = plataform;
@@ -30,7 +31,7 @@ namespace DataAccses.Entity
             this.password = password;
             this.user = user;
             this.contact = contact;
+            this.password_creator = password_creator;
         }
-
     }
 }

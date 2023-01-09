@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Configuration;
+using System.Windows.Input;
 
 namespace DataAccses.Repositories
 {
@@ -13,7 +14,8 @@ namespace DataAccses.Repositories
         private readonly string ConectionString;
         public Repository()
         {
-            this.ConectionString = ConfigurationManager.ConnectionStrings["logScreen.Properties.Settings.Setting"].ToString();         
+
+            this.ConectionString = ConfigurationManager.ConnectionStrings["MyDB"].ToString();         
         }
         public OleDbConnection GetConnection()
         {

@@ -20,10 +20,10 @@ namespace DataAccses.Repositories
         {
             //Inicializando as querys
 
-            insert = "INSERT INTO USER VALUES (@SENHA,@ALT_SENHA)";
-            select = "SELECT * FROM TBL_USER";
-            update = "UPDATE TBL_USER SET (SENHA = @SENHA, ALT_SENHA = @ALT_SENHA)";
-            delete = "DELETE FROM TBL_USER WHERE ID = @id_pk";
+            insert = "INSERT INTO Tbl_User (SENHA, ALT_SENHA) VALUES (@SENHA,@ALT_SENHA)";
+            select = "SELECT * FROM Tbl_User";
+            update = "UPDATE Tbl_User SET (SENHA = @SENHA, ALT_SENHA = @ALT_SENHA)";
+            delete = "DELETE Tbl_User TBL_USER WHERE ID = @id_pk";
         }
 
         public int Add(User entity)

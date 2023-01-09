@@ -23,7 +23,7 @@ namespace logScreen
         private void Test_Load(object sender, EventArgs e)
         {
             UserModel userModel = new UserModel();
-            dataGridView1.DataSource = userModel.getAll();
+            dataGridView1.DataSource = userModel.GetAll();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace logScreen._public._classes
                 this.toggleUserControls(panel, new Uc_cad());
                 label.Text = "Login";
             }
-            else
+            else if(label.Text == "Login")
             {
                 this.toggleUserControls(panel, new uc_log());
                 label.Text = "Create user";

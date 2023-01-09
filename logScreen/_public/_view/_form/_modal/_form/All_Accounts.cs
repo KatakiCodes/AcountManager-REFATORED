@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain.ObjectValue;
 
 namespace logScreen._modal
 {
@@ -19,10 +14,7 @@ namespace logScreen._modal
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
-            for(int i = 0; i < 10; i++)
-            {
-                guna2DataGridView1.Rows.Add("Nelson Dos Santos");
-            }
+
         }
 
         private void Guna2CircleButton1_Click(object sender, EventArgs e)
@@ -82,6 +74,16 @@ namespace logScreen._modal
         private void Btn_Done_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void All_Accounts_Load(object sender, EventArgs e)
+        {
+            guna2DataGridView1.DataSource = Cache.account;
         }
     }
 }

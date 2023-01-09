@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using Domain.ObjectValue;
+using Domain.Model;
 using logScreen._modal._modal_behavior;
 
 namespace logScreen
@@ -14,7 +16,7 @@ namespace logScreen
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-
+            guna2TileButton4.PerformClick();
         }
 
         private void Label4_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace logScreen
 
         private void DashBoard_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -60,7 +62,24 @@ namespace logScreen
 
         private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void Guna2TileButton4_Click(object sender, EventArgs e)
+        {
+            lbl_totalAccounts.Text = Cache.account.Count.ToString();
+
+            //Filter shorts password
+            var shortcounter = 0;
+            foreach (AccountModel account in Cache.account)
+            {
+                if (Cache.account.Find(x => x.Password.Length <= 6) != null)
+                {
+
+                    shortcounter += 1;
+                }
+            }
+            lbl_TotalShortsPasswords.Text = shortcounter.ToString();
         }
     }
 }

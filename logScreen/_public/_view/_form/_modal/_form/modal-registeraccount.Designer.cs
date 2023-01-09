@@ -73,7 +73,7 @@
             this.txt_Plataform_name.Location = new System.Drawing.Point(232, 94);
             this.txt_Plataform_name.Name = "txt_Plataform_name";
             this.txt_Plataform_name.PasswordChar = '\0';
-            this.txt_Plataform_name.PlaceholderText = "Name of the plataform";
+            this.txt_Plataform_name.PlaceholderText = "Plataform";
             this.txt_Plataform_name.SelectedText = "";
             this.txt_Plataform_name.ShadowDecoration.Parent = this.txt_Plataform_name;
             this.txt_Plataform_name.Size = new System.Drawing.Size(183, 36);
@@ -125,6 +125,7 @@
             this.txt_contact.Size = new System.Drawing.Size(183, 36);
             this.txt_contact.TabIndex = 3;
             this.txt_contact.TextChanged += new System.EventHandler(this.Guna2TextBox3_TextChanged);
+            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_contact_KeyPress);
             // 
             // label3
             // 
@@ -188,7 +189,7 @@
             this.guna2TileButton1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TileButton1.ForeColor = System.Drawing.Color.Crimson;
             this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Location = new System.Drawing.Point(87, 285);
+            this.guna2TileButton1.Location = new System.Drawing.Point(80, 304);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
@@ -209,12 +210,13 @@
             this.guna2TileButton2.Font = new System.Drawing.Font("Poppins Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
             this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Location = new System.Drawing.Point(239, 285);
+            this.guna2TileButton2.Location = new System.Drawing.Point(232, 304);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
             this.guna2TileButton2.Size = new System.Drawing.Size(138, 38);
             this.guna2TileButton2.TabIndex = 14;
             this.guna2TileButton2.Text = "Regist";
+            this.guna2TileButton2.Click += new System.EventHandler(this.Guna2TileButton2_Click);
             // 
             // pictureBox1
             // 
@@ -366,6 +368,7 @@
             this.Name = "Modal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modal";
+            this.Load += new System.EventHandler(this.Modal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,6 +9,7 @@ namespace logScreen._userControls
     public partial class Uc_cad : UserControl
     {
         viewFunction vf = new viewFunction();
+        UserModel userModel = new UserModel();
 
         public Uc_cad()
         {
@@ -22,56 +23,49 @@ namespace logScreen._userControls
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            UserModel user = new UserModel();
-            ValidationObject validationObject;
+            userModel.Password = txt_Password.Text;
+            userModel.Alt_password = txt_Other_Password.Text;
 
-            user.Password = txt_Password.Text;
-            user.Alt_password = txt_Other_Password.Text;
-            
-            if(txt_Confirm_Password.Text != txt_Password.Text || txt_Comfirm_Other_Password.Text != txt_Other_Password.Text)
+            bool validation = new ValidationObject(userModel).Validate();
+            if (validation == true)
             {
-                MessageBox.Show("Error to confirm passwords");
-            }
-            else
-            {
-                validationObject = new ValidationObject(user);
-                if (validationObject.Validate() == true)
+                if (txt_Password.Text == txt_Confirm_Password.Text && txt_Other_Password.Text == txt_Comfirm_Other_Password.Text)
                 {
-
+                    userModel.state = Domain.ObjectValue.EntityState.Added;
+                    MessageBox.Show(userModel.saveChages());
                 }
                 else
                 {
-                    return;
+                    MessageBox.Show("Check the confirmation of the password");
                 }
-                
 
             }
         }
 
-    private void Uc_cad_Load(object sender, EventArgs e)
-    {
-         
-    }
-
-    private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-    {
-        if (linkLabel1.Text == "Show passwords")
+        private void Uc_cad_Load(object sender, EventArgs e)
         {
-            txt_Password.UseSystemPasswordChar = false;
-            txt_Confirm_Password.UseSystemPasswordChar = false;
-            txt_Other_Password.UseSystemPasswordChar = false;
-            txt_Comfirm_Other_Password.UseSystemPasswordChar = false;
-            linkLabel1.Text = "Hide passwords";
-        }
-        else if (linkLabel1.Text == "Hide passwords")
-        {
-            txt_Password.UseSystemPasswordChar = true;
-            txt_Confirm_Password.UseSystemPasswordChar = true;
-            txt_Other_Password.UseSystemPasswordChar = true;
-            txt_Comfirm_Other_Password.UseSystemPasswordChar = true;
 
-            linkLabel1.Text = "Show passwords";
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (linkLabel1.Text == "Show passwords")
+            {
+                txt_Password.UseSystemPasswordChar = false;
+                txt_Confirm_Password.UseSystemPasswordChar = false;
+                txt_Other_Password.UseSystemPasswordChar = false;
+                txt_Comfirm_Other_Password.UseSystemPasswordChar = false;
+                linkLabel1.Text = "Hide passwords";
+            }
+            else if (linkLabel1.Text == "Hide passwords")
+            {
+                txt_Password.UseSystemPasswordChar = true;
+                txt_Confirm_Password.UseSystemPasswordChar = true;
+                txt_Other_Password.UseSystemPasswordChar = true;
+                txt_Comfirm_Other_Password.UseSystemPasswordChar = true;
+
+                linkLabel1.Text = "Show passwords";
+            }
         }
     }
-}
 }

@@ -41,18 +41,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_TotalShortsPasswords = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_totalAccounts = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TileButton3 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton4 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -62,6 +59,8 @@
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.applicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2TileButton5 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -70,9 +69,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -172,11 +171,11 @@
             this.guna2Panel2.Controls.Add(this.pictureBox4);
             this.guna2Panel2.Controls.Add(this.label6);
             this.guna2Panel2.Controls.Add(this.label7);
-            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.lbl_TotalShortsPasswords);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.guna2TileButton1);
             this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.lbl_totalAccounts);
             this.guna2Panel2.Location = new System.Drawing.Point(271, 33);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
@@ -226,16 +225,16 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "SHORT PASSWORDS";
             // 
-            // label8
+            // lbl_TotalShortsPasswords
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 46F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(248, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 109);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "0";
+            this.lbl_TotalShortsPasswords.AutoSize = true;
+            this.lbl_TotalShortsPasswords.Font = new System.Drawing.Font("Poppins", 46F, System.Drawing.FontStyle.Bold);
+            this.lbl_TotalShortsPasswords.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lbl_TotalShortsPasswords.Location = new System.Drawing.Point(248, 90);
+            this.lbl_TotalShortsPasswords.Name = "lbl_TotalShortsPasswords";
+            this.lbl_TotalShortsPasswords.Size = new System.Drawing.Size(87, 109);
+            this.lbl_TotalShortsPasswords.TabIndex = 39;
+            this.lbl_TotalShortsPasswords.Text = "0";
             // 
             // label5
             // 
@@ -277,16 +276,16 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "All acounts";
             // 
-            // label1
+            // lbl_totalAccounts
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 46F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(55, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 109);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "8";
+            this.lbl_totalAccounts.AutoSize = true;
+            this.lbl_totalAccounts.Font = new System.Drawing.Font("Poppins", 46F, System.Drawing.FontStyle.Bold);
+            this.lbl_totalAccounts.ForeColor = System.Drawing.Color.SlateBlue;
+            this.lbl_totalAccounts.Location = new System.Drawing.Point(55, 90);
+            this.lbl_totalAccounts.Name = "lbl_totalAccounts";
+            this.lbl_totalAccounts.Size = new System.Drawing.Size(87, 109);
+            this.lbl_totalAccounts.TabIndex = 35;
+            this.lbl_totalAccounts.Text = "8";
             // 
             // guna2Panel3
             // 
@@ -297,8 +296,6 @@
             this.guna2Panel3.Controls.Add(this.guna2TileButton4);
             this.guna2Panel3.Controls.Add(this.pictureBox6);
             this.guna2Panel3.Controls.Add(this.pictureBox7);
-            this.guna2Panel3.Controls.Add(this.label9);
-            this.guna2Panel3.Controls.Add(this.label10);
             this.guna2Panel3.Controls.Add(this.label12);
             this.guna2Panel3.Controls.Add(this.label13);
             this.guna2Panel3.Location = new System.Drawing.Point(271, 359);
@@ -332,22 +329,13 @@
             this.guna2TileButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TileButton4.ForeColor = System.Drawing.Color.White;
             this.guna2TileButton4.HoverState.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Location = new System.Drawing.Point(223, 150);
+            this.guna2TileButton4.Location = new System.Drawing.Point(241, 150);
             this.guna2TileButton4.Name = "guna2TileButton4";
             this.guna2TileButton4.ShadowDecoration.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Size = new System.Drawing.Size(135, 42);
+            this.guna2TileButton4.Size = new System.Drawing.Size(94, 42);
             this.guna2TileButton4.TabIndex = 42;
-            this.guna2TileButton4.Text = "Go to";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(267, 14);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(43, 62);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
+            this.guna2TileButton4.Text = "Refresh";
+            this.guna2TileButton4.Click += new System.EventHandler(this.Guna2TileButton4_Click);
             // 
             // pictureBox7
             // 
@@ -358,29 +346,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 37;
             this.pictureBox7.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins Medium", 7F);
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(220, 111);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 36);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "ALL CHANGES LIKE\r\nUSER NAME OR PASSWORD";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label10.Location = new System.Drawing.Point(246, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 25);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Changes";
             // 
             // label12
             // 
@@ -428,7 +393,7 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // accountsToolStripMenuItem
@@ -442,7 +407,7 @@
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.editToolStripMenuItem1.Text = "See all accounts";
             // 
             // applicationToolStripMenuItem
@@ -456,9 +421,35 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // guna2TileButton5
+            // 
+            this.guna2TileButton5.BorderRadius = 12;
+            this.guna2TileButton5.CheckedState.Parent = this.guna2TileButton5;
+            this.guna2TileButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2TileButton5.CustomImages.Parent = this.guna2TileButton5;
+            this.guna2TileButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TileButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton5.HoverState.Parent = this.guna2TileButton5;
+            this.guna2TileButton5.Location = new System.Drawing.Point(693, 281);
+            this.guna2TileButton5.Name = "guna2TileButton5";
+            this.guna2TileButton5.ShadowDecoration.Parent = this.guna2TileButton5;
+            this.guna2TileButton5.Size = new System.Drawing.Size(148, 42);
+            this.guna2TileButton5.TabIndex = 37;
+            this.guna2TileButton5.Text = "Add new account";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(267, 15);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(43, 62);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
             // 
             // DashBoard
             // 
@@ -466,6 +457,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(972, 596);
+            this.Controls.Add(this.guna2TileButton5);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -490,10 +482,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,22 +499,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_totalAccounts;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_TotalShortsPasswords;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton4;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
@@ -533,5 +522,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem applicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton5;
     }
 }

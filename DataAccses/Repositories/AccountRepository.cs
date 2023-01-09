@@ -1,4 +1,5 @@
-﻿using System;
+﻿ 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,14 @@ namespace DataAccses.Repositories
 
         public AccountRepository()
         {
-            //Inicializando as querys
+            //Inicializando as querys  
+            /*,,USER,CONTACT*/ /*,@user,@contact*/
 
-            insert = "INSERT INTO TBL_ACCOUNT VALUES (@plataform,@email,@password,@user,@contact)";
-            select = "SELECT * FROM TBL_ACCOUNT";
-            update = "UPDATE TBL_ACCOUNT SET (PLATAFORM = @plataform, EMAIL = @email, PASSWORD = @password,USER = @user,CONTACT = @contact)";
-            delete = "DELETE FROM TBL_ACCOUNT WHERE ID = @id";
+            //Alguns campos não estão devidamente definidos para validar a query insert
+            insert = "INSERT INTO ACCOUNT (PLATAFORM, EMAIL, PASSWORD_CONTENT, USERNAME, CONTACT,PASSWORD_CREATOR) VALUES (@plataform, @email, @password, @user, @contact, @password_creator)";
+            select = "SELECT * FROM ACCOUNT";
+            update = "UPDATE ACCOUNT SET (PLATAFORM = @plataform, EMAIL = @email, PASSWORD_CONTENT = @password,USERNAME = @user,CONTACT = @contact)";
+            delete = "DELETE FROM ACCOUNT WHERE ID = @id";
         }
         public int Add(Account entity)
         {
@@ -34,6 +37,7 @@ namespace DataAccses.Repositories
             parameters.Add(new System.Data.OleDb.OleDbParameter("@password", entity.password));
             parameters.Add(new System.Data.OleDb.OleDbParameter("@user", entity.user));
             parameters.Add(new System.Data.OleDb.OleDbParameter("@contact", entity.contact));
+            parameters.Add(new System.Data.OleDb.OleDbParameter("@password_creator", entity.password_creator));
 
             return (ExecuteNonQuery(insert));
         }
@@ -48,9 +52,11 @@ namespace DataAccses.Repositories
                     accountList.Add(new Account {
                         id_pk = Convert.ToInt16(dataRow[0]),
                         plataform = dataRow[1].ToString(),
-                        password = dataRow[2].ToString(),
-                        user = dataRow[3].ToString(),
-                        contact = Convert.ToInt16(dataRow[4])
+                        email = dataRow[2].ToString(),
+                        password = dataRow[3].ToString(),
+                        user = dataRow[4].ToString(),
+                        contact = Convert.ToInt32(dataRow[5]),
+                        password_creator = dataRow[6].ToString()
                     });
 
                 }
